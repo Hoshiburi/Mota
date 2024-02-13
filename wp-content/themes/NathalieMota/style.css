@@ -1,0 +1,395 @@
+/*
+Theme Name: NathalieMotaTheme
+Theme URI: http://nathalie-mota.local/
+Author: Hoshiburi
+Author URI: https://pixeldev.org/
+Description: Thème pour le site de Nathalie Mota, photographe Freelance
+Version: 1.0
+Tags: photographe, freelance
+Text Domain: NathalieMotaTheme
+*/
+
+@font-face {
+    font-display: swap;
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: url("assets/fonts/space-mono-v13-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Space Mono";
+    font-style: italic;
+    font-weight: 400;
+    src: url("assets/fonts/space-mono-v13-latin-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 700;
+    src: url("assets/fonts/space-mono-v13-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Space Mono";
+    font-style: italic;
+    font-weight: 700;
+    src: url("assets/fonts/space-mono-v13-latin-700italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    src: url("assets/fonts/poppins-v20-latin-300.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    src: url("assets/fonts/poppins-v20-latin-500.woff2") format("woff2");
+}
+
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 280px;
+    letter-spacing: 0em;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "Space Mono";
+    font-size: 96px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 142px;
+    text-align: left;
+    margin: 80px 0 20px 0;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+        line-height: 41px;
+    }
+}
+
+h2 {
+    font-family: "Space Mono";
+    font-size: 66px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 58px;
+    text-align: left;
+    margin: 40px 0 20px 0;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 46px;
+        line-height: 48px;
+    }
+}
+
+h3 {
+    font-family: "Space Mono";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+p {
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: left;
+}
+
+
+
+
+/* CONTACT POP-UP */
+.overlay.active {
+    visibility: visible;
+    opacity: 1;   
+}
+
+.popup.active {
+    transform: translateY(0);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style de la popup */
+.popup {
+    border: 5px solid #000000;
+    border-radius: 5px;
+    transition: all 2s ease-in-out;
+    position: absolute;
+    max-width: 597px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 769px;
+    min-height: 583px;
+}
+
+/* Style de l'image de l'en-tête de la popup */
+.popup_img {
+    width: 110%;
+    height: auto;
+    display: block;
+    margin: 0px;
+    overflow: hidden;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 28px 128px 28px 128px;
+    font-family: Space Mono;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.menu-main_menu-container ul {
+    list-style: none !important;
+    display: flex !important;
+    padding: 0 !important;
+}
+
+.menu-main_menu-container li {
+    margin-right: 45px !important;
+}
+
+.menu-main_menu-container li:last-child {
+    margin-right: 0 !important;
+}
+
+
+/* FOOTER */
+.footer ul {
+list-style: none;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+border-top: 2px solid black;
+margin-top: 8px;
+margin-bottom: 8px;
+width: 100%;
+font-family: Space Mono;
+font-size: 16px;
+line-height: 24px;
+}
+
+.footer ul li {
+margin: 0 86px;
+}
+
+@media only screen and (max-width: 790px) {
+.footer ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-top: 2px solid black;
+    
+}
+
+.footer ul li {
+    margin: 24px 0;
+}
+}
+
+
+
+/* PAGE VIE PRIVEE */
+.vie_privee {
+    margin: 30px 50px 30px 50px;
+}
+
+.vie_privee p {
+    text-align: justify;
+}
+
+
+/* PAGE ACCUEIL */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.hero-img {
+    object-fit: cover;
+    width: 100%;
+    max-width: 1440px;
+    max-height : 962px;
+}
+
+.hero-title {
+    position: absolute;
+    max-width: 100%;
+    padding: 5%;
+}
+
+
+/* SINGLE PHOTO*/
+#primary.site-main {
+    max-width: 1148px;
+    margin: auto;
+}
+
+.container-more-photo{
+    border-top: 2px solid black;
+}
+
+
+.related-photos-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    width: 1148px;
+    height: 538px;
+    position: relative;
+    overflow: hidden;
+}
+
+.related-photo {
+    width: calc(50% - 10px);
+    float: left;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+.related-photos-title {
+    margin-top: 77px; 
+    margin-bottom: 52px; 
+    font-family: Space Mono;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.related-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.related-photo:last-child {
+    margin-right: 0;
+}
+
+.button-container {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 53px;
+    margin-bottom: 64px;
+}
+
+.all-photos-button {
+    padding: 16px 73.5px;
+    justify-content: center; 
+    font-family: Space Mono;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0em;
+    position: relative;
+}
+
+.all-photos-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #D8D8D8;
+    border-radius: 2px;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 768px) {
+    .related-photos-list {
+        flex-direction: column;
+        align-items: center;
+        width: 317.66px;
+        height: 578.6px; 
+        overflow: hidden;
+        margin: 0 auto;
+        
+    }
+
+    .related-photo {
+        width: 317.66px;
+        height: calc(50% - 10.5px);
+        box-sizing: border-box;
+        margin-bottom: 21px;
+        margin-right: 0px;
+    }
+
+    .related-photos-title {
+        text-align: center;
+        margin-top: 24px;
+        margin-bottom: 20px;
+    }
+
+    .button-container {
+        display: none;
+    }
+}
+
+
+
+
+
+/* lightbox */
+.lightbox__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0 50px;
+  }
+
