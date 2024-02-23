@@ -1,4 +1,5 @@
 <?php wp_footer(); ?>
+<?php get_template_part( 'templates_parts/lightbox' ); ?>
 <?php get_template_part( 'templates_parts/contact' ); ?>
 <footer>
     <div class="footer">

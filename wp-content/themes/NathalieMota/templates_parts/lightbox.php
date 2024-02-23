@@ -1,15 +1,15 @@
 <?php
 // Template Name: lightbox
 ?>
-
-<div class="lightbox">
-  <button class="lightbox__close">Fermer</button>
-  <button class="lightbox__next">Suivante</button>
-  <button class="lightbox__prev">Précédente</button>
-  <button class="ref_lightbox">REF</button>
-  <button class="cat_lightbox">CAT</button>
-
-  <div class="lightbox__container">
-    <img src="chemin/vers/image.jpg" alt="">
-  </div>
+<div id="lightbox" style="display:none;">
+    <button id="close-lightbox">&#10006;</button>
+    <div class="lightbox-content">
+        <img src="" id="lightbox-img" alt="Image en plein écran">
+        <div class="lightbox-info">
+            <p id="lightbox-category"></p>
+            <p id="lightbox-ref"></p>
+        </div>
+        <button id="prev-photo"><?php echo '<img src="' . get_template_directory_uri() . '/assets/images/arrow-left.png" alt="Flèche" class="arrow">'; ?> Précédente </button>
+        <button id="next-photo">Suivante <?php echo '<img src="' . get_template_directory_uri() . '/assets/images/arrow-right.png" alt="Flèche" class="arrow">'; ?></button>
+    </div>
 </div>
